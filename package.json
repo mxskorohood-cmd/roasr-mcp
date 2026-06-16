@@ -20,6 +20,7 @@
   "files": [
     "dist",
     "README.md",
+    "README.ru.md",
     "SKILL.md"
   ],
   "engines": {
