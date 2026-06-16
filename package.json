@@ -1,0 +1,57 @@
+{
+  "name": "roasr-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for RoASr — connect Claude / Cursor / any MCP client to your RoASr workspace: Meta ad-audit findings, KPIs, competitor spy and Vision creative analysis. Thin client over the public /v1 API.",
+  "type": "module",
+  "license": "MIT",
+  "author": "SmartFlow LLC",
+  "homepage": "https://roasr.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mxskorohood-cmd/roasr-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mxskorohood-cmd/roasr-mcp/issues"
+  },
+  "bin": {
+    "roasr-mcp": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "SKILL.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "roasr",
+    "meta-ads",
+    "google-ads",
+    "ad-audit",
+    "marketing-analytics",
+    "claude",
+    "cursor"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "prepare": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "tsc -p tsconfig.build.json",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.2",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  }
+}
